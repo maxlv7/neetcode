@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+project(netcode)
+
+set(CMAKE_CXX_STANDARD 17)
+include_directories(include)
+#add_executable(netcode main.cpp )
+
+#add_executable(UDPServer src/exam2/UDPServer.cpp)
+#add_executable(UDPClient src/exam2/UDPClient.cpp)
+#add_executable(PortScan src/exam3/main.cpp src/exam3/Scanner.cpp src/exam3/Scanner.h)
+#add_executable(TCPClient src/exam4/client.cpp)
+#add_executable(TCPServer src/exam4/server.cpp)
+#add_executable(IOServer src/exam5/Server.cpp)
+#add_executable(IOClient src/exam5/Client.cpp)
+#link_directories(lib)
+#link_libraries(lib/x64/Packet)
+link_directories(lib/x64)
+add_executable(ARP src/exam6/arp.cpp)
+target_link_libraries(ARP wpcap.lib)
+target_link_libraries(ARP Packet.lib)
+
